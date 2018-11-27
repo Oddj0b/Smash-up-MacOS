@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82DF44EBB20A351054B08B41 /* Pods_Smash_up_macos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC16396DF181C49617516235 /* Pods_Smash_up_macos.framework */; };
 		9234A69E21AD622000EE94DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234A69D21AD622000EE94DA /* AppDelegate.swift */; };
 		9234A6A021AD622100EE94DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234A69F21AD622100EE94DA /* Assets.xcassets */; };
 		9234A6A321AD622100EE94DA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9234A6A121AD622100EE94DA /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B18300544CEB4775C700632 /* Pods-Smash-up-macos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smash-up-macos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smash-up-macos/Pods-Smash-up-macos.debug.xcconfig"; sourceTree = "<group>"; };
 		9234A69A21AD622000EE94DA /* Smash-up-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smash-up-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234A69D21AD622000EE94DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9234A69F21AD622100EE94DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9234A6A221AD622100EE94DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9234A6A421AD622100EE94DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234A6A521AD622100EE94DA /* Smash_up_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Smash_up_macos.entitlements; sourceTree = "<group>"; };
+		9234A6AB21AD623100EE94DA /* Smash-up-macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smash-up-macos.entitlements"; sourceTree = "<group>"; };
+		9ADFE613DC36C8B5BC4B99D4 /* Pods-Smash-up-macos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smash-up-macos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smash-up-macos/Pods-Smash-up-macos.release.xcconfig"; sourceTree = "<group>"; };
+		FC16396DF181C49617516235 /* Pods_Smash_up_macos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smash_up_macos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DF44EBB20A351054B08B41 /* Pods_Smash_up_macos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71F9EA54E836086B5670457C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B18300544CEB4775C700632 /* Pods-Smash-up-macos.debug.xcconfig */,
+				9ADFE613DC36C8B5BC4B99D4 /* Pods-Smash-up-macos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9234A69121AD622000EE94DA = {
 			isa = PBXGroup;
 			children = (
 				9234A69C21AD622000EE94DA /* Smash-up-macos */,
 				9234A69B21AD622000EE94DA /* Products */,
+				71F9EA54E836086B5670457C /* Pods */,
+				E165B3CAF37CDC4D7805CCA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +68,7 @@
 		9234A69C21AD622000EE94DA /* Smash-up-macos */ = {
 			isa = PBXGroup;
 			children = (
+				9234A6AB21AD623100EE94DA /* Smash-up-macos.entitlements */,
 				9234A69D21AD622000EE94DA /* AppDelegate.swift */,
 				9234A69F21AD622100EE94DA /* Assets.xcassets */,
 				9234A6A121AD622100EE94DA /* MainMenu.xib */,
@@ -60,6 +78,14 @@
 			path = "Smash-up-macos";
 			sourceTree = "<group>";
 		};
+		E165B3CAF37CDC4D7805CCA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC16396DF181C49617516235 /* Pods_Smash_up_macos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -67,6 +93,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9234A6A821AD622100EE94DA /* Build configuration list for PBXNativeTarget "Smash-up-macos" */;
 			buildPhases = (
+				58B82C0D19527F3B8CDD954E /* [CP] Check Pods Manifest.lock */,
 				9234A69621AD622000EE94DA /* Sources */,
 				9234A69721AD622000EE94DA /* Frameworks */,
 				9234A69821AD622000EE94DA /* Resources */,
@@ -92,6 +119,11 @@
 				TargetAttributes = {
 					9234A69921AD622000EE94DA = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,6 +156,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58B82C0D19527F3B8CDD954E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smash-up-macos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9234A69621AD622000EE94DA /* Sources */ = {
@@ -265,9 +322,10 @@
 		};
 		9234A6A921AD622100EE94DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B18300544CEB4775C700632 /* Pods-Smash-up-macos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Smash-up-macos/Smash_up_macos.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Smash-up-macos/Smash-up-macos.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T2TBC34KR3;
@@ -284,9 +342,10 @@
 		};
 		9234A6AA21AD622100EE94DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ADFE613DC36C8B5BC4B99D4 /* Pods-Smash-up-macos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Smash-up-macos/Smash_up_macos.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Smash-up-macos/Smash-up-macos.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T2TBC34KR3;
