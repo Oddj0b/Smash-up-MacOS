@@ -7,6 +7,10 @@
 //
 
 import Cocoa
+import AppKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,7 +19,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        let appCenterSelector = NSSelectorFromString("appCenter")
+        guard
+            let secrets = NSClassFromString("Secrets") as AnyObject as? NSObjectProtocol,
+            secrets.responds(to: appCenterSelector),
+            let appCenter = secrets.perform(appCenterSelector)?.takeRetainedValue() as? String,
+            appCenter.count > 0
+            else {
+                return
+        }
+        MSAppCenter.start(appCenter, withServices: [
+            MSAnalytics.self,
+            MSCrashes.self,
+            ])
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
