@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MainViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:Smash-up-macos.xcodeproj">
    </FileRef>
    <FileRef
