@@ -1,4 +1,4 @@
-platform :osx, '10.14'
+platform :osx, '10.13'
 workspace 'Smash-up-macos.xcworkspace'
 use_frameworks!
 target 'Smash-up-macos' do
