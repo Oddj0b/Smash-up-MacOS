@@ -1,25 +1,16 @@
 PODS:
-  - AppCenter (1.9.0):
-    - AppCenter/Analytics (= 1.9.0)
-    - AppCenter/Crashes (= 1.9.0)
-  - AppCenter/Analytics (1.9.0):
-    - AppCenter/Core
-  - AppCenter/Core (1.9.0)
-  - AppCenter/Crashes (1.9.0):
-    - AppCenter/Core
+  - HockeySDK-Mac (5.1.1)
 
 DEPENDENCIES:
-  - AppCenter
-  - AppCenter/Analytics
-  - AppCenter/Crashes
+  - HockeySDK-Mac
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - AppCenter
+    - HockeySDK-Mac
 
 SPEC CHECKSUMS:
-  AppCenter: 3cf7b9387549e9703dab068793e404013e8c0cc1
+  HockeySDK-Mac: 59e49aca86e4ee22c5c6ccc2d66771cfd6087f48
 
-PODFILE CHECKSUM: 43ddd82ea6112cd6cc47f59c801b86c00e971f6a
+PODFILE CHECKSUM: b4618734b20968a13a6c9baa3be42209cbf0266a
 
 COCOAPODS: 1.5.3

@@ -7,39 +7,26 @@
 //
 
 import Cocoa
-import AppKit
-import AppCenter
-import AppCenterAnalytics
-import AppCenterCrashes
+import HockeySDK
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    static var didSetupHockeySDK = false
     @IBOutlet weak var window: NSWindow!
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let appCenterSelector = NSSelectorFromString("appCenter")
-        guard
-            let secrets = NSClassFromString("Secrets") as AnyObject as? NSObjectProtocol,
-            secrets.responds(to: appCenterSelector),
-            let appCenter = secrets.perform(appCenterSelector)?.takeRetainedValue() as? String,
-            appCenter.count > 0
-            else {
-                return
+        if !AppDelegate.didSetupHockeySDK{
+            BITHockeyManager.shared()?.configure(withIdentifier: "APP_IDENTIFIER")
+            BITHockeyManager.shared()?.start()
+            AppDelegate.didSetupHockeySDK = true
         }
-        MSAppCenter.start(appCenter, withServices: [
-            MSAnalytics.self,
-            MSCrashes.self,
-            ])
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-    @IBAction
-    func crash(_ sender: Any?) {
-        MSCrashes.generateTestCrash()
+    @IBAction func crash(_ sender: Any?) {
+        
     }
 
 }

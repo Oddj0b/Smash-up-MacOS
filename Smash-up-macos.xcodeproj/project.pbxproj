@@ -12,6 +12,7 @@
 		9234A6A021AD622100EE94DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234A69F21AD622100EE94DA /* Assets.xcassets */; };
 		9234A6A321AD622100EE94DA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9234A6A121AD622100EE94DA /* MainMenu.xib */; };
 		9234A6AD21AD643800EE94DA /* Secrets.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234A6AC21AD643800EE94DA /* Secrets.m */; };
+		924C93E921E8AD9400547625 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924C93E821E8AD9400547625 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9234A6A521AD622100EE94DA /* Smash_up_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Smash_up_macos.entitlements; sourceTree = "<group>"; };
 		9234A6AB21AD623100EE94DA /* Smash-up-macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smash-up-macos.entitlements"; sourceTree = "<group>"; };
 		9234A6AC21AD643800EE94DA /* Secrets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Secrets.m; sourceTree = "<group>"; };
+		924C93E821E8AD9400547625 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9ADFE613DC36C8B5BC4B99D4 /* Pods-Smash-up-macos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smash-up-macos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smash-up-macos/Pods-Smash-up-macos.release.xcconfig"; sourceTree = "<group>"; };
 		FC16396DF181C49617516235 /* Pods_Smash_up_macos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smash_up_macos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 			children = (
 				9234A6AB21AD623100EE94DA /* Smash-up-macos.entitlements */,
 				9234A69D21AD622000EE94DA /* AppDelegate.swift */,
+				924C93E821E8AD9400547625 /* MainView.swift */,
 				9234A69F21AD622100EE94DA /* Assets.xcassets */,
 				9234A6A121AD622100EE94DA /* MainMenu.xib */,
 				9234A6A421AD622100EE94DA /* Info.plist */,
@@ -100,6 +103,8 @@
 				9234A69621AD622000EE94DA /* Sources */,
 				9234A69721AD622000EE94DA /* Frameworks */,
 				9234A69821AD622000EE94DA /* Resources */,
+				62BC8DBEDE318174A1BF3E75 /* [CP] Embed Pods Frameworks */,
+				E676A034D6BC3CB22716DFA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,6 +189,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		62BC8DBEDE318174A1BF3E75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Smash-up-macos/Pods-Smash-up-macos-frameworks.sh",
+				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework",
+				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HockeySDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/HockeySDK.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smash-up-macos/Pods-Smash-up-macos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E676A034D6BC3CB22716DFA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Smash-up-macos/Pods-Smash-up-macos-resources.sh",
+				"${PODS_ROOT}/HockeySDK-Mac/HockeySDK-Mac/HockeySDK.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smash-up-macos/Pods-Smash-up-macos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -192,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9234A69E21AD622000EE94DA /* AppDelegate.swift in Sources */,
+				924C93E921E8AD9400547625 /* MainView.swift in Sources */,
 				9234A6AD21AD643800EE94DA /* Secrets.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
